@@ -1,0 +1,28 @@
+package Logical;
+
+public class DuplicateCharCount {
+
+	public static void main(String[] args) {
+    String string1="Java By Kiran Coaching Classes";
+    int count;
+    
+    char string[]=string1.toCharArray();
+    System.out.println("Duplicate characters in given string");
+	for(int i=0;i<string.length;i++) {
+		count=1;
+		for (int j =i+1 ; j < string.length; j++) {
+			if(string[i]==string[j] &&string[i]!=' ') {
+				count++;
+				string[j]='0';
+			}
+		}
+		if(count>0 && string[i]!='0' && string[i]!=' ') {
+			System.out.println(string[i]+"  =  "+count);
+		}
+		
+		
+	}
+	
+	}
+
+}
